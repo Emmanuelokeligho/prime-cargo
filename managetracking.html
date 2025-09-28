@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>edit tracking</title>
+  <link rel="stylesheet" href="manage.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+<div class="logo">PrimeCargo Admin</div>
+
+ <!-- Hamburger Icon -->
+  <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+      ☰
+  </div>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="homepage.html" class="active">Dashboard</a>
+      <a href="createtracking.html">Create Tracking</a>
+      <a href="managetracking.html">Manage Tracking</a>
+      <a href="seting.html">Settings</a>
+    </nav>
+  </header>
+</div>
+
+  <section class="hero">
+    <div class="user">
+      <h4>Welcome, admin!</h4>
+      <button class="logout">Logout</button>
+    </div>
+  </section>
+
+<div class="container">
+    <!-- Page Title -->
+    <h2>Manage Tracking</h2>
+
+    <!-- Search and Filter -->
+    <div class="filter-section">
+      <input type="text" placeholder="Enter tracking number, name...">
+      <select>
+        <option>All Statuses</option>
+        <option>Active</option>
+        <option>On Hold</option>
+        <option>In Transit</option>
+      </select>
+      <button class="apply-btn">Apply Filter</button>
+    </div>
+
+    <!-- Table -->
+    <table>
+      <thead>
+        <tr>
+          <th>Tracking Number</th>
+          <th>Sender Name</th>
+          <th>Receiver Name</th>
+          <th>Status</th>
+          <th>Last Updated</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>TRK-MQFY35K77IHP</td>
+          <td>Billie Eilish</td>
+          <td>Mochalin Alexander</td>
+          <td><span class="status active">ACTIVE</span></td>
+          <td>2025-08-15 09:44:19</td>
+          <td>
+            <button class="edit"><i class="fa fa-pen"></i></button>
+            <button class="print"><i class="fa fa-print"></i></button>
+            <button class="delete"><i class="fa fa-trash"></i></button>
+          </td>
+        </tr>
+        <tr>
+          <td>TRK-81NDGFWSBSRM</td>
+          <td>David C. Hill</td>
+          <td>Robin Sutphin</td>
+          <td><span class="status hold">ON HOLD</span></td>
+          <td>2025-07-21 02:07:24</td>
+          <td>
+            <button class="edit"><i class="fa fa-pen"></i></button>
+            <button class="print"><i class="fa fa-print"></i></button>
+            <button class="delete"><i class="fa fa-trash"></i></button>
+          </td>
+        </tr>
+        <tr>
+          <td>TRK-8REHNNRVLOX2</td>
+          <td>Victor</td>
+          <td>Victor</td>
+          <td><span class="status transit">IN TRANSIT</span></td>
+          <td>2025-06-10 12:46:21</td>
+          <td>
+            <button class="edit"><i class="fa fa-pen"></i></button>
+            <button class="print"><i class="fa fa-print"></i></button>
+            <button class="delete"><i class="fa fa-trash"></i></button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+ <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const hamburger = document.getElementById("hamburger");
+    const navLinks = document.getElementById("navLinks");
+
+    hamburger.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+  });
+</script>
+</body>
+</html>

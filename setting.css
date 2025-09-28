@@ -1,0 +1,301 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #f8f9fa;
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+  background: #2c2f33;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  padding: 5px 10px;
+  transition: 0.3s;
+}
+
+/* .nav-links a.active, */
+.nav-links a:hover {
+  background: blue;
+  border-radius: 4px;
+}
+
+/* Hamburger styles */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.hero{
+    padding: 20px;
+    border-radius: 10px;
+    background: white;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.logout {
+  background: transparent;
+  border: 1px solid blue;
+  padding: 5px 12px;
+  border-radius: 5px;
+  color: #007bff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.logout:hover {
+  background: lightslategray;
+  color: white;
+}
+
+
+
+    .container {
+      max-width: 1200px;
+      margin: 30px auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+
+    .create{
+        margin: 30px auto;
+        margin-left: 40px;
+    }
+
+    h2 {
+      font-size: 20px;
+      margin-bottom: 15px;
+      font-weight: bold;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      font-weight: 500;
+      margin-bottom: 6px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="date"] {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      font-size: 14px;
+      transition: border 0.3s, box-shadow 0.3s;
+    }
+
+    input[type="address"] {
+      width: 100%;
+      height: 100px;
+      padding: 12px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      font-size: 14px;
+      transition: border 0.3s, box-shadow 0.3s;
+    }
+
+    input:focus {
+      border: 1px solid #007BFF;
+      outline: none;
+      box-shadow: 0 0 5px rgba(0, 123, 255, 0.4);
+    }
+
+    .closebtn{
+    padding: 20px;
+    color: white;
+    background: #007BFF;
+    cursor: pointer;
+    border: 0;
+    border-radius: 6px;
+    width: 20%;
+    font-size: 15px;
+}
+
+.password-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-wrapper input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.password-wrapper button {
+  position: absolute;
+  right: 10px;
+  background: none;
+  border: none;
+  color: #007BFF;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #1a1a2e;
+    width: 100%;
+    text-align: center;
+    display: none;
+    padding: 20px 0;
+    z-index: 1000;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 10px 0;
+    display: block;
+  }
+}
+
+/* Tablet devices (768px and below) */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+    margin: 20px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  .create {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="date"],
+  input[type="address"],
+  .password-wrapper input {
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  .closebtn {
+    width: 40%;
+    font-size: 14px;
+    padding: 16px;
+  }
+
+  .password-wrapper button {
+    font-size: 13px;
+    right: 8px;
+  }
+}
+
+/* Mobile devices (480px and below) */
+@media (max-width: 480px) {
+  .container {
+    padding: 15px;
+    margin: 15px;
+  }
+
+  h1 {
+    font-size: 18px;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+
+  .create {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 20px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="date"],
+  input[type="address"],
+  .password-wrapper input {
+    font-size: 12px;
+    padding: 10px;
+  }
+
+  .closebtn {
+    width: 100%;
+    font-size: 14px;
+    padding: 14px;
+  }
+
+  .password-wrapper button {
+    font-size: 12px;
+    right: 6px;
+  }
+}

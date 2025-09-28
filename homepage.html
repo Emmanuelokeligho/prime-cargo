@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="homepage.css"/>
+</head>
+<body>
+  
+    <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">PrimeCargo Admin</div>
+
+     <!-- Hamburger Icon -->
+  <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+      ☰
+  </div>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="homepage.html" class="active">Dashboard</a>
+      <a href="createtracking.html">Create Tracking</a>
+      <a href="managetracking.html">Manage Tracking</a>
+      <a href="seting.html">Settings</a>
+    </nav>
+  </header>
+</div>
+
+  <section class="hero">
+    <div class="user">
+      <h4>Welcome, admin!</h4>
+      <button class="logout">Logout</button>
+    </div>
+  </section>
+
+  <!-- Main content -->
+  <main class="main-content">
+    <h2>Dashboard Overview</h2>
+    <div class="cards">
+      <div class="card">
+        <p>Total Packages</p>
+        <h3>3</h3>
+        <div class="icon blue">📦</div>
+      </div>
+      <div class="card">
+        <p>Delivered</p>
+        <h3>0</h3>
+        <div class="icon green">✅</div>
+      </div>
+      <div class="card">
+        <p>In Transit/Pending</p>
+        <h3>1</h3>
+        <div class="icon yellow">🚚</div>
+      </div>
+      <div class="card">
+        <p>On Hold</p>
+        <h3>1</h3>
+        <div class="icon red">✋</div>
+      </div>
+    </div>
+
+    <h2>Recent Tracking Updates</h2>
+    <table class="tracking-table">
+      <thead>
+        <tr>
+          <th>Tracking Number</th>
+          <th>Receiver Name</th>
+          <th>Status</th>
+          <th>Last Update</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>TRK-MQFY35K77IHP</td>
+          <td>Mochalin Alexander</td>
+          <td><span class="status active">ACTIVE</span></td>
+          <td>2025-08-15 09:44:19</td>
+        </tr>
+        <tr>
+          <td>TRK-81NDGFWSBSRM</td>
+          <td>Robin Sutphin</td>
+          <td><span class="status on-hold">ON HOLD</span></td>
+          <td>2025-07-21 02:07:24</td>
+        </tr>
+        <tr>
+          <td>TRK-8REHNNRVLOX2</td>
+          <td>Victor</td>
+          <td><span class="status in-transit">IN TRANSIT</span></td>
+          <td>2025-06-10 12:46:21</td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+
+   <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const hamburger = document.getElementById("hamburger");
+    const navLinks = document.getElementById("navLinks");
+
+    hamburger.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+  });
+</script>
+</body>
+</html>
